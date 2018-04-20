@@ -1,0 +1,104 @@
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="customCSS.css">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
+  <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.14.0/jquery.validate.js"></script>
+  <style type="text/css">
+ 
+  </style>
+
+
+
+</head>
+<body class="bg-custom">
+<div class="container-fluid">
+    <div class="col-lg-12 margin-top">
+     <a> <h1 class="glyphicon glyphicon-home text-white"></h1></a>
+    </div>
+  </div>
+<section class="container-fluid  bg-custom">
+            <div class="login-table">
+                    <div class="container text-center">
+                            <div class="col-lg-4 margin-top-div col-lg-offset-4 ">
+                                <div class="text-center">
+                                    <h1 class="text-white margin-top">Canvab</h1>
+                                </div>
+                                <div class="bg-white p-4 mt-5 rounded box-custom">
+                                    <form class="login-form margin-top" id="login_form">
+                                        <div class="row">
+                                            <div class="col-lg-12 mt-4">
+                                                <input type="email" class="form-control" placeholder="Email" name="email" id="email">
+                                            </div>
+                                            <div class="col-lg-12 mt-4">
+                                                <input type="password" name="password" id="password" class="form-control" placeholder="Password">
+                                            </div>
+                                         
+                                            <div class="col-lg-12 mt-4" ">
+                                                <div class="custom-control custom-checkbox margin-top">
+                                                    <input type="checkbox" class="custom-control-input">
+                                                    <span class="custom-control-indicator"></span>
+                                                    <span class="mt4" ">Check this custom checkbox</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-12 mt-5 mb-4">
+                                                <button class="btn btn-custom" >Login</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="text-center mt-3 margin-top">
+                                    <p><a href="password_forget.html" class="text-white text-center text-capitalize font-weight-bold">Forgot Your password ?</a></p>
+                                    <p><small class="text-white mr-2">Don't have an account ?</small> <a href="signup.html" class="text-white text-capitalize font-weight-bold">create an account</a></p>
+                                  </div>
+                            </div>
+                        </div>
+                    </div>
+               
+            </div>
+        </section>
+        <script type="text/javascript">
+          
+    $(document).ready(function()
+{
+  $.validator.addMethod("special",function(value,char)
+    {
+      return this.optional(char)||/^[a-z0-9\_]+$/i.test(value)},""),
+  $.validator.addMethod("lower",function(value,char)
+    {
+      return this.optional(char)||/[a-z]+/.test(value)},""),
+  $.validator.addMethod("uper",function(value,char)
+    {
+      return this.optional(char)||/[A-Z]+/.test(value)},""), 
+  $("#login_form").validate(
+    {
+      rules:{
+        email:{
+          required:(!0)
+        },
+        password:{
+          required:(!0),minlength:(8), special:(!0),lower:(!0),uper:(!0)          
+        }
+        },
+        messages:{
+          password:{
+            required:"enter password", minlength:"length greater than 8", special:"no special char",lower:"one Lower case alphabet", uper:"one Upper case alphabet"
+            }
+          },
+          highlight: function (char) {
+            $(char).parent().addClass('error')
+        },
+        unhighlight: function (char) {
+            $(char).parent().removeClass('error')
+        }
+        }
+        ) 
+});  
+        </script>
+</body>
+</html>

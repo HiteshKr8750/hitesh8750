@@ -1,0 +1,81 @@
+
+.logo {
+    float: left;
+    /*line-height: 71px;*/
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+    color: #fff;
+    font-weight: 600;
+    font-size: 28px;
+    margin-right: 41px;
+}
+/*.top-bar{
+  background-color: #2C2C2C;
+}*/
+.float-left{
+  float: left !important;
+}
+.phone-topbar {
+    font-size: 12px;
+    padding: 11px 0;
+    color: #B9B9B9;
+}
+.float-right {
+    float: right!important;
+}
+.home-bg-color {
+  margin-top: -20px;
+    background-color: #6362bb;
+    padding-top: 80px;
+    position: relative;
+}
+
+.justify-content-center {
+    -ms-flex-pack: center!important;
+    justify-content: center!important;
+}
+
+.text-white {
+    color: #fff!important;
+}
+.text-center {
+    text-align: center!important;
+}
+.home-subtitle {
+    color: #C0C0E2;
+    font-size: 18px;
+    /*max-width: 750px;*/
+   margin-left: 20px;
+}
+.btn-custom {
+    font-weight: 700;
+    color: #fff;
+    font-size: 16px;
+    text-transform: uppercase;
+    transition: all 0.3s;
+    background-color: #28D3AB;
+    box-shadow: none !important;
+    margin-top: 50px;
+}
+.mt-5{
+  margin-top: 10px;
+}
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+.home-dashboard {
+    position: relative;
+    top: 80px;
+}
+
+  /* Note: Try to remove the following lines to see the effect of CSS positioning */
+  .affix {
+      top: 0;
+      width: 100%;
+      z-index: 9999 !important;
+  }
+
+  .affix + .container-fluid {
+      padding-top: 70px;
+  }
